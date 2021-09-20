@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Element</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        var Array = [];
+        var size = parseInt(prompt("Enter the desire size of the Array(Numeric Value Only): "));
+
+        for(var i=0; i<size; i++) {
+	
+	    //Taking Input from user
+	    Array[i] = prompt('Enter Element ' + (i+1));
+        }
+
+        //Print the array in the console.
+        console.log(Array);
+
+        document.write("Your Entered Array is: " + Array + "</br>");
+
+       
+
+        const unique = Array => {
+        let present = false;
+        for(let i = 0; i < Array.length; i++){
+            if(present){
+                if(Array[i+1] !== Array[i]){
+                present = false;
+            };
+            }else{
+                if(Array[i+1] === Array[i]){
+                present = true;
+            continue;
+            };
+         return Array[i];
+        };
+        };
+         return null;
+        };
+        console.log(unique(Array));
+
+        document.write("Array's unique element is: " + unique(Array));
+    </script>
+</body>
+</html>

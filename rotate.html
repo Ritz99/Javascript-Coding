@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        var Array = [];
+        var size = parseInt(prompt("Enter the desire size of the Array(Numeric Value Only): "));
+
+        for(var i=0; i<size; i++) {
+	
+	    //Taking Input from user
+	    Array[i] = prompt('Enter Element ' + (i+1));
+        }
+
+        //Print the array in the console.
+        console.log(Array);
+
+        document.write("Your Entered Array is: " + Array + "</br>");
+
+        var exc = prompt("Enter the element from you want to Rotate:  "); 
+
+        document.write("Your Array will Rotate from " + exc + "</br>");
+
+        function rotate()
+        {
+            const index=Array.indexOf(exc);
+
+            const sliced=Array.splice(index,Array.length);
+            return[...sliced,...Array];
+        }
+
+        
+        var result = rotate(Array,exc);
+
+        console.log(result)
+
+        
+
+        document.write("Your Rotated array is: " + result);
+    </script>
+</body>
+</html>
